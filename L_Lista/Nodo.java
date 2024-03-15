@@ -30,3 +30,4 @@ public class Nodo {
         return "[" + valore + "]";
     }
 }
+

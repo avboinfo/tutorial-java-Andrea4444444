@@ -1,6 +1,33 @@
 package L_Lista;
-
 public class Lista {
+
+    class Interatore{
+        private Nodo nodo;
+
+        private Interatore(Nodo nodo){
+            this.nodo=nodo;
+        }
+
+        public boolean hasNext(){
+            return nodo!=null;
+
+        }
+
+        public Nodo next(){
+            if(nodo==null) return null;
+            Nodo result = new Nodo(nodo.getValore(), nodo.getSuccessivo());
+            nodo=nodo.getSuccessivo();
+            return result;
+        }
+
+    }
+
+    public Interatore getInteratore(){
+        Interatore i = new Interatore(radice);
+        return i;
+    }
+
+
 
     Nodo radice;
     
@@ -45,6 +72,61 @@ public class Lista {
         p1.setSuccessivo(n);
     }
 
+
+   /*   boolean addAfter(Nodo n, int pos){
+        if(isEmpty()){
+            return false;
+        }else{
+            Nodo iniziale = radice; 
+            int count = 0;
+    
+            while(iniziale != null){
+                if(count == pos){
+                    Nodo nextNode = iniziale.getSuccessivo();
+                    iniziale.setSuccessivo(n);
+                    n.setSuccessivo(nextNode);
+                    return true;
+                }
+                iniziale = iniziale.getSuccessivo();
+                count++;
+            }
+            return false;
+        }
+    }
+    */
+    public boolean addAfter(int pos, Nodo n){
+
+        Interatore iter =this.getInteratore();
+        int i; Nodo npos;
+        for (i=0;i<pos;i++){
+            
+            if(iter.hasNext()) npos=iter.next());
+            else return false;
+
+        }
+        n.setSuccessivo(npos.getSuccessivo());
+        npos.setSuccessivo(n);
+
+        
+        
+
+    }
+
+
+    boolean removePos(int pos){
+        
+
+
+    }
+
+    boolean removeValue(int value){
+
+
+
+
+    }
+
+
     public String toString() {
         String s = "Elementi della lista: ";
         Nodo p = radice;
@@ -55,4 +137,5 @@ public class Lista {
         s += "End!\n";
         return s;
     }
+
 }

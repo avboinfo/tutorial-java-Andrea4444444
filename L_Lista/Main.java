@@ -23,6 +23,14 @@ public class Main {
         l.addSorted(new Nodo(450, null));
 
         System.out.println( l );
+
+        l.addAfter(new Nodo(3, null),1);
+
+
+        System.out.println( l );
+
+        l.addAfter(pos:3, new Nodo(1492), null)
+
     } 
 
 }

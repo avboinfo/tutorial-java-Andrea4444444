@@ -24,12 +24,9 @@ public class Main {
 
         System.out.println( l );
 
-        l.addAfter(new Nodo(3, null),1);
-
-
+        l.addAfter(3, new Nodo(1492, null));
         System.out.println( l );
 
-        l.addAfter(pos:3, new Nodo(1492), null)
 
     } 
 

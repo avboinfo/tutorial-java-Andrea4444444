@@ -4,7 +4,6 @@ public class Nodo {
 
     private int valore;
     private Nodo successivo;
-   
 
     public Nodo( int valore, Nodo successivo ) {
         this.valore = valore;
@@ -31,4 +30,3 @@ public class Nodo {
         return "[" + valore + "]";
     }
 }
-

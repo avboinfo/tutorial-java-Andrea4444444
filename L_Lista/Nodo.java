@@ -2,16 +2,16 @@ package L_Lista;
 
 public class Nodo {
 
-    private int valore;
+    private int tvalore;
     private Nodo successivo;
 
     public Nodo( int valore, Nodo successivo ) {
-        this.valore = valore;
+        this.tvalore = valore;
         this.successivo = successivo;
     }
 
     public void setValore( int nuovoValore ) {
-        valore = nuovoValore;
+        tvalore = nuovoValore;
     }
 
     public void setSuccessivo( Nodo nuovoSuccessivo ) {
@@ -19,7 +19,7 @@ public class Nodo {
     } 
 
     public int getValore() {
-        return valore;
+        return tvalore;
     }
 
     public Nodo getSuccessivo() {
@@ -27,6 +27,6 @@ public class Nodo {
     }
 
     public String toString() {
-        return "[" + valore + "]";
+        return "[" + tvalore + "]";
     }
 }

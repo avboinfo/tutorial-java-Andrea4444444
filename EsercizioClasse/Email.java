@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Email {
     
-    List<Mail> Email new Arraylist<Mail>();
+    List<Mail> Email= new Arraylist<Mail>();
     List<Mail> ps;
     
     public Email(){
